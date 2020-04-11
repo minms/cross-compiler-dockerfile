@@ -1,5 +1,5 @@
 FROM cross-compler:nanopc-t3
 
-COPY 3rdparty/* /opt/
+COPY 3rdparty /opt/
 
-RUN apt-get install -y cmake
+RUN apt-get install -y cmake pkg-config
