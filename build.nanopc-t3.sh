@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t cross-compler:nanopc-t3 .
+docker build -f Dockerfile.nanopc-t3 -t cross-compler:nanopc-t3 .
 docker system prune -f
