@@ -1,0 +1,14 @@
+prefix=/opt/cross-env/ffmpeg
+exec_prefix=${prefix}
+libdir=/opt/cross-env/ffmpeg/lib
+includedir=/opt/cross-env/ffmpeg/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.5.100
+Requires: 
+Requires.private: libavfilter >= 7.40.101, libswscale >= 5.3.100, libavformat >= 58.20.100, libavcodec >= 58.35.100, libswresample >= 3.3.100, libavresample >= 4.0.0, libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lm -lasound
+Cflags: -I${includedir}
